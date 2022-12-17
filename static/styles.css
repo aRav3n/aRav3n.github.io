@@ -1,0 +1,49 @@
+body {
+    font-family: Arial;
+    color: black;
+}
+
+.container-fluid {
+    position: relative;
+}
+
+footer {
+    text-align: center;
+}
+
+h1 {
+    font-weight: bold;
+    font-family: cursive;
+    font-size: 300%;
+    padding-top: 10vh;
+}
+
+.img-bg {
+    max-width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    /* Got help from https://www.digitalocean.com/community/tutorials/css-cropping-images-object-fit */
+    object-position: 60% 30%;
+}
+
+.lr-pad {
+    padding-left:2%;
+    padding-right: 2%;
+}
+
+.nav-item {
+    font-size: 120%;
+}
+
+.nav-link {
+    color: black;
+}
+
+.overlay {
+    opacity: 0.5;
+}
+
+.social-media-link {
+    height: auto;
+    width: 75%;
+}
