@@ -1,7 +1,7 @@
 .blurb-box {
     font-family: Arial, Helvetica, sans-serif;
     margin: auto;
-    width: 75vw;
+    width: 85vw;
 }
 
 body {
@@ -11,6 +11,7 @@ body {
 
 .col-sm {
     min-width: 240px;
+    padding: 2%;
 }
 
 .container-fluid {
@@ -50,22 +51,54 @@ h1 {
     object-position: 60% 30%;
 }
 
+.img-med {
+    aspect-ratio: 1 / 1;
+    min-height: 240px;
+    min-width: 240px;
+    object-fit: cover;
+    width: 85vw;
+    height: 85vw;
+}
+
+.img-med-about {
+    object-position: 40% 0%;
+}
+
+.img-med-rig {
+    object-position: 65% 65%;
+}
+
+.img-small {
+    aspect-ratio: 1 / 1;
+    min-height: 240px;
+    min-width: 240px;
+    object-fit: cover;
+    width: 35vw;
+    height: 35vw;
+}
+
+.img-small-andy {
+    object-position: 55% 35%;
+}
+
+.img-small-denali {
+    object-position: 60% 25%;
+}
+
+.img-small-nadz {
+    object-position: 40% 45%;
+}
+
+.img-small-us {
+    object-position: 50% 15%;
+}
+
 .img-rig {
     object-position: 60% 60%;
 }
 
 .img-us {
     object-position: 40% 70%;
-}
-
-.img-us-small {
-    aspect-ratio: 1 / 1;
-    min-height: 240px;
-    min-width: 240px;
-    object-position: 50% 15%;
-    object-fit: cover;
-    width: 35vw;
-    height: 35vw;
 }
 
 .lr-pad {
@@ -88,6 +121,11 @@ h1 {
 .page-intro {
     width: 100vw;
     height: 100vh;
+}
+
+.row {
+    padding-bottom: 2%;
+    padding-top: 2%;
 }
 
 .social-media-link {
