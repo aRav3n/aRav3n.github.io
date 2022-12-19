@@ -9,7 +9,15 @@ body {
     color: black;
 }
 
+.col {
+    align-items: center;
+    min-width: 240px;
+    padding: 2%;
+    text-align: center;
+}
+
 .col-sm {
+    align-items: center;
     min-width: 240px;
     padding: 2%;
 }
@@ -29,18 +37,26 @@ h1 {
     padding-top: 9%;
 }
 
-.img-container {
-    display: flex;
-    overflow: hidden;
-    
+h3 {
+    text-align: center;
+}
+
+.img-ak-sign {
+    object-position: 50% 70%;
 }
 
 .img-bg {
     max-width: 100%;
-    max-height: auto;
+    max-height: 100%;
     min-width: 100vw;
     min-height: 100vh;
     object-fit: cover;
+}
+
+.img-container {
+    display: flex;
+    overflow: hidden;
+    
 }
 
 .img-hl {
@@ -101,6 +117,15 @@ h1 {
     object-position: 40% 70%;
 }
 
+.img-xs {
+    aspect-ratio: 1 / 1;
+    min-height: 240px;
+    min-width: 240px;
+    object-fit: cover;
+    width: 20vw;
+    height: 20vw;
+}
+
 .lr-pad {
     padding-left:2%;
     padding-right: 2%;
@@ -116,6 +141,10 @@ h1 {
 
 .overlay {
     opacity: 0.5;
+}
+
+p {
+    text-align: left;
 }
 
 .page-intro {
