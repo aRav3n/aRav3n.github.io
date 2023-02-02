@@ -4,7 +4,7 @@
     <head>
         <meta name="viewport" content="initial-scale=1, width=device-width">
 
-        <!-- Bootstrap - https://getbootstrap.com/docs/5.2/getting-started/introduction/ -->
+        <!-- Bootstrap https://getbootstrap.com/docs/5.2/getting-started/introduction/ -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
             rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
             crossorigin="anonymous">
@@ -12,7 +12,7 @@
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
             crossorigin="anonymous"></script>
         
-        <!--https://favicon.io/emoji-favicons/compass -->
+        <!-- Image credit: https://favicon.io/emoji-favicons/compass -->
         <link href="/images/icon_page.ico" rel="icon">
 
         <link href="style.css" rel="stylesheet">
@@ -61,51 +61,42 @@
             </nav>
             <h1 class="overlay position-absolute start-50 text-center top-0 translate-middle-x">4Funner Vibes</h1>
             <!-- Hero image -->
-            <img src="/images/index_hero.jpg" alt="Denali NP Landscape" class="img-bg img-main">
+            <img src="/images/index_hero.jpg" alt="Denali NP Landscape" class="img-hero img-hero-index">
         </div>
-
-        <!-- Blurb about us then link to the About Us page for more -->
-        <div class="align-items-center container blurb-box p-4 position-relative">
-            <div class="align-items-center d-flex p-4 row">
-                <div class="align-items-center col-sm img-container">
-                    <img src="/images/index_us.jpg" alt="Photo of us done by our good friend Samal" 
-                        class="img-small img-small-us">
-                </div>
-                <div class="col-sm">
-                    <h3 class="fw-bold p-2 text-center">A Bit About Us</h3>
-                    <h5 class="p-2 text-content">We are Nadeesha and Andy</h5>
-                    <p class="p-1 text-content">
+        <div class="flexContainerVertical">
+            <div class="flexCardHorizontal">
+                <img src="/images/index_us.jpg" alt="Photo of us done by our good friend Samal" 
+                    class="img-small">
+                <div class="flexCardTextContainer">
+                    <h3>A Bit About Us</h3>
+                    <h5>We are Nadeesha and Andy</h5>
+                    <p>
                         We started dating in 2011 and have been adventuring together since! In 2021, 
                         after a couple years of planning we decided to leave our desk jobs to pursue 
                         our dream of driving the Pan American highway.
                     </p>
-                    <div class="d-flex justify-content-center">
-                        <a href="/us.html" class="btn btn-outline-secondary button">Learn more</a>
+                    <div class="flexCardHorizontal">
+                        <a href="/us.html" class="button">Learn more</a>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- Cool photo and link to travel highlights. Maybe each list our favorite thing so far -->
-        <div class="align-items-center container blurb-box p-4 position-relative">
-            <div class="align-items-center d-flex p-4 row">
-                <div class="align-items-center col-sm img-container">
-                    <img src="/images/index_highlights.jpg" alt="Denali!" class="img-small img-small-denali">
-                </div>
-                <div class="col-sm">
-                    <h3 class="fw-bold p-2 text-center">Some Highlights from our Travels</h3>
-                    <p class="p-1 text-content">
+        <div class="flexContainerVertical">
+            <div class="flexCardHorizontal">
+                    <img src="/images/index_highlights.jpg" alt="Denali!" class="img-small">
+                <div class="flexCardTextContainer">
+                    <h3>Some Highlights from our Travels</h3>
+                    <p>
                         There have been many highlights on our Pan American Highway trip so far. 
                         Alaska in general stands out as an incredible place with tons of natural 
                         beauty and wildlife; we even got to see a salmon run which was super cool!
                     </p>
-                    <div class="d-flex justify-content-center">
-                        <a href="/highlights.html" class="btn btn-outline-secondary button">Learn more</a>
+                    <div class="flexCardHorizontal">
+                        <a href="/highlights.html" class="button">Learn more</a>
                     </div>
                 </div>
             </div>
         </div>
-
         <footer>
             Copyright &#169; 4FunnerVibes 2022
         </footer>
