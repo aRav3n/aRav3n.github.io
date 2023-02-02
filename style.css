@@ -26,11 +26,27 @@ body {
     position: relative;
 }
 
+.flexCardHorizontal {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3vw;
+}
+
+.flexContainer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    padding: 5vh 5vw 5vh 5vw;
+}
+
 footer {
     text-align: center;
 }
 
 h1 {
+    color: ;
     font-weight: bold;
     font-family: cursive;
     font-size: 300%;
