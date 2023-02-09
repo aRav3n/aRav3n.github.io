@@ -80,15 +80,21 @@ body {
 }
 
 footer {
+    background-color: #f4f4f5;
+    color: #252832;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+    min-width: 100vw;
+    padding: .5vh 0 .5vh 0;
     text-align: center;
+    width: 100%;
 }
 
 h1 {
-    color: ;
-    font-weight: bold;
+    color: black;
     font-family: cursive;
     font-size: 300%;
-    padding-top: 9%;
+    font-weight: bold;
 }
 
 h3,
@@ -101,23 +107,48 @@ h3 {
     font-weight: bold;
 }
 
+.heroContainer {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100vw;
+}
+
+#heroHighlight {
+    background-image: url("/images/highlight_hero.jpg");
+    object-position: 70% 20%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#heroIndex {
+    background-image: url("/images/index_hero.jpg");
+    background-position: 60% 30%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.heroNav {
+    align-self: flex-start;
+    padding: 1vw;
+}
+
+.heroText {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    opacity: 0.7;
+    padding: 1vh 10vw 1vh 10vw;
+}
+
 .img-container {
     display: flex;
     overflow: hidden;
 }
 
-.img-hero {
-    min-width: 100vw;
-    min-height: 100vh;
-    object-fit: cover;
-}
-
-.img-hero-index {
-    object-position: 60% 30%;
-}
-
 .img-hero-highlight {
-    object-position: 70% 20%;
 }
 
 .img-hero-rig {
@@ -169,18 +200,9 @@ h3 {
     color: black;
 }
 
-.overlay {
-    opacity: 0.5;
-}
-
 p {
     font-family: Garamond, serif;
     text-align: left;
-}
-
-.page-intro {
-    width: 100vw;
-    height: 100vh;
 }
 
 .social-media-link {
