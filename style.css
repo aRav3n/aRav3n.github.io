@@ -134,29 +134,32 @@ h3 {
     padding: 1vw;
 }
 
+#heroRig {
+    background-image: url("/images/rig_hero.jpg");
+    background-position: 60% 60%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .heroText {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
-    opacity: 0.7;
+    opacity: 0.8;
     padding: 1vh 10vw 1vh 10vw;
+}
+
+#heroUs {
+    background-image: url("/images/us_hero.jpg");
+    background-position: 41% 70%;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .img-container {
     display: flex;
     overflow: hidden;
-}
-
-.img-hero-highlight {
-}
-
-.img-hero-rig {
-    object-position: 60% 60%;
-}
-
-.img-hero-us {
-    object-position: 41% 70%;
 }
 
 .img-med {
