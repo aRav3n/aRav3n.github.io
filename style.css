@@ -131,7 +131,7 @@ h3 {
 
 .heroNav {
     align-self: flex-start;
-    padding: 1vw;
+    padding: 1vh 1vw 1vh 1vw;
 }
 
 #heroRig {
@@ -155,11 +155,6 @@ h3 {
     background-position: 41% 70%;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-.img-container {
-    display: flex;
-    overflow: hidden;
 }
 
 .img-med {
@@ -193,6 +188,10 @@ h3 {
 .lr-pad {
     padding-left:2%;
     padding-right: 2%;
+}
+
+#navbar {
+
 }
 
 .nav-item {
