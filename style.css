@@ -1,8 +1,9 @@
 body {
     font-family: Arial;
     color: black;
+    margin: 0;
     padding: 0;
-    width: 100vw;
+    width: 100%;
 }
 
 .button {
@@ -21,6 +22,10 @@ body {
 
 .container-fluid {
     position: relative;
+}
+
+div {
+    box-sizing: border-box;
 }
 
 .flexCardHorizontal {
@@ -66,7 +71,7 @@ body {
     display: flex;
     margin: 0;
     padding: 5vh 5vw 5vh 5vw;
-    width: 100vw;
+    width: 100%;
 }
 
 .flexContainerHorizontal {
@@ -84,7 +89,6 @@ footer {
     color: #252832;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: large;
-    min-width: 100vw;
     padding: .5vh 0 .5vh 0;
     text-align: center;
     width: 100%;
@@ -131,7 +135,9 @@ h3 {
 
 .heroNav {
     align-self: flex-start;
-    padding: 1vh 1vw 1vh 1vw;
+    display: flex;
+    padding: 1vh;
+    width: 100vw;
 }
 
 #heroRig {
@@ -191,15 +197,16 @@ h3 {
 }
 
 #navbar {
+    position: absolute;
+}
 
+#navIcon {
+    height: auto;
+    width: 50px;
 }
 
 .nav-item {
     font-size: 120%;
-}
-
-.nav-link {
-    color: black;
 }
 
 p {
@@ -207,9 +214,20 @@ p {
     text-align: left;
 }
 
+#socialLinks {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0 0 0 auto;
+    padding: 0;
+}
+
 .social-media-link {
-    height: auto;
-    width: 75%;
+    height: 80%;
+    margin: 0;
+    padding: 0;
+    width: auto;
 }
 
 .text-content {
