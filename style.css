@@ -205,16 +205,14 @@ h3 {
     width: 50px;
 }
 
-.nav-item {
-    font-size: 120%;
+.navItem {
+    height: 35px;
+    margin: 0;
+    padding: 0;
+    width: auto;
 }
 
-p {
-    font-family: Garamond, serif;
-    text-align: left;
-}
-
-#socialLinks {
+.navList {
     align-items: center;
     display: flex;
     justify-content: flex-end;
@@ -223,11 +221,13 @@ p {
     padding: 0;
 }
 
-.social-media-link {
-    height: 80%;
-    margin: 0;
-    padding: 0;
-    width: auto;
+.nav-item {
+    font-size: 120%;
+}
+
+p {
+    font-family: Garamond, serif;
+    text-align: left;
 }
 
 .text-content {
