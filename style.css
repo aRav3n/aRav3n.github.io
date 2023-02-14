@@ -148,6 +148,7 @@ h3 {
     font-family: cursive;
     font-size: 300%;
     font-weight: bold;
+    padding: 1vh 3vw 1vh 3vw;
     position: relative;
     z-index: 2;
 }

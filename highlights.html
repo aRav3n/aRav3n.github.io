@@ -3,62 +3,31 @@
 <html lang="en-US">
     <head>
         <meta name="viewport" content="initial-scale=1, width=device-width">
-
-        <!-- Bootstrap - CSS only - https://getbootstrap.com/docs/5.2/getting-started/introduction/ -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
-            rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
-            crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
-            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
-            crossorigin="anonymous"></script>
-        
-        <!--https://favicon.io/emoji-favicons/compass -->
+        <!-- Image credit: https://favicon.io/emoji-favicons/compass -->
         <link href="/images/icon_page.ico" rel="icon">
-
         <link href="style.css" rel="stylesheet">
+        <script src="script.js" defer></script>
         <title>4FV Highlights</title>
     </head>
     <body>
         <div id="heroHighlight" class="heroContainer">
-            <div class="heroNav">
-                <nav class="end-0 navbar navbar-expand-md navbar-light start-0 top-0">
-                    <div class="container-fluid lr-pad">
-                        <button aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" 
-                        class="bg-light navbar-toggler" data-bs-target="#navbar" data-bs-toggle="collapse" 
-                        type="button">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbar">
-                            <ul class="align-self-center bg-light me-auto mt-2 nav navbar-light navbar-nav rounded">
-                                <li class="nav-item align-self-center">
-                                    <a class="nav-link" href="/index.html">4FunnerVibes</a>
-                                </li>
-                                <li class="nav-item align-self-center">
-                                    <a class="nav-link" href="/us.html">About Us</a>
-                                </li>
-                                <li class="nav-item align-self-center">
-                                    <a class="nav-link" href="/rig.html">About Our Rig</a>
-                                </li>
-                                <li class="nav-item align-self-center">
-                                    <a class="nav-link" href="/rig.html" aria-current="true">Travel Highlights</a>
-                                </li>
-                            </ul>
-                            <ul class="align-self-center bg-light ms-auto mt-2 nav navbar-light navbar-nav rounded">
-                                <li class="nav-item align-self-center">
-                                    <a class="nav-link overlay" href="https://www.instagram.com/4funnervibes/" 
-                                    target="_blank" rel="noreferrer noopener"><img alt="IG" class=" social-media-link" 
-                                    src="images/icon_ig.png"></a>
-                                </li>
-                                <li class="nav-item align-self-center">
-                                    <a class="nav-link overlay" href="https://ne-np.facebook.com/4FunnerVibes/" 
-                                    target="_blank" rel="noreferrer noopener"><img alt="fb" class="social-media-link" 
-                                    src="images/icon_fb.png"></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
+            <div id="navSection">
+                <img id="navIcon" src="/images/navIcon_clear.png">
+                <nav id="navbarDisplay"></nav>
+                <ul id="socialLinks">
+                    <li>
+                        <a href="https://www.instagram.com/4funnervibes/" 
+                        target="_blank" rel="noreferrer noopener"><img alt="IG" class="navItem" 
+                        src="images/icon_ig.png"></a>
+                    </li>
+                    <li>
+                        <a href="https://ne-np.facebook.com/4FunnerVibes/" 
+                        target="_blank" rel="noreferrer noopener"><img alt="fb" class="navItem" 
+                        src="images/icon_fb.png"></a>
+                    </li>
+                </ul>
             </div>
+            <nav id="navbarPopUp"></nav>
             <div class="heroText">
                 <h1>Travel Highlights</h1>
             </div>

@@ -1,7 +1,7 @@
 // Initiate global variables
+const navbarPopUp = document.querySelector('#navbarPopUp');
 const navButton = document.querySelector('#navIcon');
 let navList4fv = create4fvNavList();
-const navbarPopUp = document.querySelector('#navbarPopUp');
 
 // Display menu on click for narrower screens
 navButton.addEventListener('click',() => {
