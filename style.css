@@ -94,13 +94,6 @@ footer {
     width: 100%;
 }
 
-h1 {
-    color: black;
-    font-family: cursive;
-    font-size: 300%;
-    font-weight: bold;
-}
-
 h3,
 h5 {
     font-family: Arial, Helvetica, sans-serif;
@@ -113,6 +106,7 @@ h3 {
 
 .heroContainer {
     height: 100vh;
+    justify-content: center;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -133,13 +127,6 @@ h3 {
     background-size: cover;
 }
 
-.heroNav {
-    align-self: flex-start;
-    display: flex;
-    padding: 1vh;
-    width: 100vw;
-}
-
 #heroRig {
     background-image: url("/images/rig_hero.jpg");
     background-position: 60% 60%;
@@ -151,9 +138,18 @@ h3 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    text-align: center;
     opacity: 0.8;
     padding: 1vh 10vw 1vh 10vw;
+    text-align: center;
+}
+
+.heroText h1 {
+    color: black;
+    font-family: cursive;
+    font-size: 300%;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
 }
 
 #heroUs {
@@ -196,13 +192,25 @@ h3 {
     padding-right: 2%;
 }
 
-#navbar {
+#navbarPopUp {
+    background-color: white;
+    border-radius: 2em;
+    display: flex;
+    justify-content: center;
+    margin: 0 10vw 10vh 10vw;
+    opacity: .95;
     position: absolute;
+    z-index: 1;
 }
 
 #navIcon {
     height: auto;
     width: 50px;
+}
+
+.navIconActive {
+    background-color: #fff41f38;
+    border-radius: 50%;
 }
 
 .navItem {
@@ -212,13 +220,30 @@ h3 {
     width: auto;
 }
 
-.navList {
+.navLink {
+    color: black;
+    font-family: Copperplate, Papyrus, fantasy;
+    font-size: x-large;
+    text-decoration: none;
+}
+
+.navListPopUp {
     align-items: center;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    gap: 4vh;
+    justify-content: center;
     list-style: none;
-    margin: 0 0 0 auto;
-    padding: 0;
+    margin: 0;
+    padding: 8vh 0 8vh 0;
+    width: 80vw;
+}
+
+#navSection {
+    align-self: flex-start;
+    display: flex;
+    padding: 1vh;
+    width: 100vw;
 }
 
 .nav-item {
@@ -228,6 +253,14 @@ h3 {
 p {
     font-family: Garamond, serif;
     text-align: left;
+}
+
+#socialLinks {
+    align-items: center;
+    display: flex;
+    list-style: none;
+    margin: 0 0 0 auto;
+    padding: 0;
 }
 
 .text-content {
