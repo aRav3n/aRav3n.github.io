@@ -2,6 +2,12 @@
 const navbarPopUp = document.querySelector('#navbarPopUp');
 const navButton = document.querySelector('#navIcon');
 let navList4fv = create4fvNavList();
+let windowWidth = window.innerWidth;
+
+// Recalculate width upon window resize
+window.addEventListener('resize',() => {
+    windowWidth = window.innerWidth;
+});
 
 // Display menu on click for narrower screens
 navButton.addEventListener('click',() => {
