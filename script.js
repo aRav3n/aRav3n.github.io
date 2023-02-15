@@ -1,25 +1,28 @@
 // Initiate global variables
 const navbarPopUp = document.querySelector('#navbarPopUp');
 const navButton = document.querySelector('#navIcon');
-const navMenuHorizontal = document.querySelector('#navMenuHorizontal')
-let windowWidth = window.innerWidth;
-
-window.addEventListener('resize',() => {
-    windowWidth = window.innerWidth;
-    selectCorrectNavMenu();
-});
+const navMenuHorizontal = document.querySelector('#navMenuHorizontal');
+const widthToChangeAt = 650;
+let windowWidth;
 
 window.addEventListener('DOMContentLoaded',() => {
+    windowWidth = window.innerWidth;
     selectCorrectNavMenu();
+    window.addEventListener('resize',() => {
+        windowWidth = window.innerWidth;
+        selectCorrectNavMenu();
+    });
 });
 
-function selectCorrectNavMenu() {
-    if(windowWidth < 650) {
-        enablePopUpNav();
+navButton.addEventListener('click',() => {
+    if(navButton.classList.contains('navIconActive')) {
+        navbarPopUp.innerHTML = '';
+        navButton.classList.remove('navIconActive');
     } else {
-        displayHorizontalNav();
+        navbarPopUp.appendChild(create4fvNavList('navListPopUp'));
+        navButton.classList.add('navIconActive');
     };
-};
+});
 
 function addNavItem(name, url) {
     let li = document.createElement('li');
@@ -42,9 +45,9 @@ function create4fvNavList(classToAdd) {
 };
 
 function displayHorizontalNav() {
+    navButton.classList.remove('visible');
     navButton.style.display = 'none';
     if(!navMenuHorizontal.classList.contains('linksDisplayed')) {
-        console.log('adding linksDisplayed class and making menu');
         navMenuHorizontal.classList.add('linksDisplayed')
         navMenuHorizontal.style.display = 'flex';
         navMenuHorizontal.appendChild(create4fvNavList('navListDisplay'));
@@ -55,17 +58,14 @@ function enablePopUpNav() {
     navMenuHorizontal.style.display = 'none';
     navMenuHorizontal.classList.remove('linksDisplayed');
     navMenuHorizontal.innerHTML = '';
-    console.log('removed class from horizontal menu');
     navButton.style.display = 'block';
-    navButton.addEventListener('click',() => {
-        if(!navbarPopUp.classList.contains('linksDisplayed')) {
-            navbarPopUp.appendChild(create4fvNavList('navListPopUp'));
-            navbarPopUp.classList.add('linksDisplayed');
-            navButton.classList.add('navIconActive');
-        } else {
-            navbarPopUp.innerHTML = '';
-            navbarPopUp.classList.remove('linksDisplayed');
-            navButton.classList.remove('navIconActive');
-        }
-    });
+    navButton.classList.add('visible');
+};
+
+function selectCorrectNavMenu() {
+    if(windowWidth < widthToChangeAt && !navButton.classList.contains('visible')) {
+        enablePopUpNav();
+    } else if(windowWidth >= widthToChangeAt) {
+        displayHorizontalNav();
+    };
 };
