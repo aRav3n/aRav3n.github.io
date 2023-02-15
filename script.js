@@ -37,7 +37,7 @@ function addNavItem(name, url) {
 function create4fvNavList(classToAdd) {
     let ul = document.createElement('ul');
     ul.classList.add(classToAdd);
-    ul.appendChild(addNavItem('4FunnerVibes', '/index.html'));
+    ul.appendChild(addNavItem('4FunnerVibes', '/'));
     ul.appendChild(addNavItem('About Us', '/us.html'));
     ul.appendChild(addNavItem('About Our Rig', '/rig.html'));
     ul.appendChild(addNavItem('Travel Highlights', '/highlights.html'));
