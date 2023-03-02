@@ -158,12 +158,12 @@ h3 {
 
 .img-med {
     aspect-ratio: 1 / 1;
-    height: auto;
+    height: 85vmin;
     margin: 0 auto 0 auto;
     min-height: 240px;
     min-width: 240px;
     object-fit: cover;
-    width: 85vw;
+    width: 85vmin;
 }
 
 .img-small,
@@ -175,13 +175,13 @@ h3 {
 }
 
 .img-small {
-    height: 35vw;
-    width: 35vw;
+    height: calc(80px + 30vmin);
+    width: calc(80px + 30vmin);
 }
 
 .img-xs {
-    width: 20vw;
-    height: 20vw;
+    width: calc(100px + 20vmin);
+    height: calc(100px + 20vmin);
 }
 
 #navMenuHorizontal {
