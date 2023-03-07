@@ -56,6 +56,7 @@ div {
 }
 
 .flexCardVertical {
+    align-self: flex-start;
     flex-direction: column;
     gap: 2vh;
     margin: 0 auto 0 auto;
@@ -110,24 +111,15 @@ h3 {
 }
 
 #heroHighlight {
-    background-image: url("/images/highlight_hero.jpg");
-    object-position: 70% 20%;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: no-repeat 70% 20% / cover url("/images/highlight_hero.jpg");
 }
 
 #heroIndex {
-    background-image: url("/images/index_hero.jpg");
-    background-position: 60% 30%;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: no-repeat 60% 30% / cover url("/images/index_hero.jpg");
 }
 
 #heroRig {
-    background-image: url("/images/rig_hero.jpg");
-    background-position: 60% 60%;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: no-repeat 60% 60% / cover url("/images/rig_hero.jpg");
 }
 
 .heroText {
@@ -150,10 +142,7 @@ h3 {
 }
 
 #heroUs {
-    background-image: url("/images/us_hero.jpg");
-    background-position: 41% 70%;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: no-repeat 40% 70% / cover url("/images/us_hero.jpg");
 }
 
 .img-med {
