@@ -1,0 +1,70 @@
+* {
+  color: inherit;
+  height: auto;
+  margin: 0;
+  max-width: 100%;
+  padding: 0;
+}
+
+body {
+  display: grid;
+}
+
+.contact {
+  display: grid;
+}
+
+.contact a {
+  align-items: center;
+  display: flex;
+  gap: 1vw;
+  text-decoration: none;
+}
+
+.contact a img {
+  filter: invert(100%);
+}
+
+div {
+  box-sizing: border-box;
+}
+
+footer {
+  background-color: #0891b2;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer,
+header,
+main {
+  padding: 2vh 7vw;
+}
+
+footer button {
+  background-color: #ffffff00;
+  border: none;
+}
+
+footer > div {
+  align-items: center;
+  display: grid;
+  gap: 2vh;
+  overflow: hidden;
+}
+
+footer > div > picture > img {
+  object-fit: cover;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.projectGrid {
+  display: grid;
+  gap: 3vw;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}

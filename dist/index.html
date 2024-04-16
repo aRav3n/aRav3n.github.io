@@ -1,9 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Andy Ryan</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="laptop-outline.svg"><script defer src="main.js"></script></head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="laptop-outline.svg" />
+    <script defer src="main.js"></script>
+  </head>
   <body>
+    <header>
+      <div id="headerPhoto">
+        <img
+          src="../src/media/main-photo-300w.jpg"
+          alt="Andy in a tropical setting"
+          srcset="
+            ../src/media/main-photo-300w.jpg   300w,
+            ../src/media/main-photo-300w.jpg   400w,
+            ../src/media/main-photo-600w.jpg   600w,
+            ../src/media/main-photo-800w.jpg   800w,
+            ../src/media/main-photo-1000w.jpg 1000w,
+            ../src/media/main-photo-2000w.jpg 2000w
+          "
+          sizes="(max-width: 350px)"
+        />
+        <h1></h1>
+      </div>
+    </header>
   </body>
 </html>

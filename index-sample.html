@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Andy Ryan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <link rel="icon" href="laptop-outline.svg" />
+    <script defer src="main.js"></script>
+  </head>
+  <body>
+    <header>
+      <div>
+        <img
+          src="./src/media/main-photo-300w.jpg"
+          alt="Andy in a tropical setting"
+          srcset="
+            ./src/media/main-photo-300w.jpg   300w,
+            ./src/media/main-photo-300w.jpg   400w,
+            ./src/media/main-photo-600w.jpg   600w,
+            ./src/media/main-photo-800w.jpg   800w,
+            ./src/media/main-photo-1000w.jpg 1000w,
+            ./src/media/main-photo-2000w.jpg 2000w
+          "
+          sizes="(max-width: 350px)"
+        />
+        <h1></h1>
+      </div>
+    </header>
+    <main>
+      <h2>My Work</h2>
+      <div class="projectGrid"></div>
+    </main>
+    <footer>
+      <div>
+        <h2>Contact me</h2>
+        <p>Please get in touch if you would like to work together!</p>
+        <div>
+          <p>1234 Random Road</p>
+          <p>Random Town, South Dakota, 12345</p>
+        </div>
+        <div class="contact">
+          <a href="tel:555-555-5555">
+            <img
+              src="./src/media/call_FILL0_wght400_GRAD0_opsz24.svg"
+              alt="call me"
+            />
+            555-555-5555</a
+          >
+          <a href="mailto:fake.email@gmail.com">
+            <img
+              src="./src/media/mail_FILL0_wght400_GRAD0_opsz24.svg"
+              alt="email me"
+            />
+            fake.email@gmail.com</a
+          >
+        </div>
+        <div>
+          <a href=""
+            ><img
+              src="./src/media/icons8-github.svg"
+              alt="check out my git hub"
+          /></a>
+          <a href=""
+            ><img
+              src="./src/media/icons8-linkedin.svg"
+              alt="open my linkedIn page"
+          /></a>
+          <a href=""
+            ><img
+              src="./src/media/icons8-instagram.svg"
+              alt="view my Instagram"
+          /></a>
+        </div>
+      </div>
+      <div>
+        <picture>
+          <source
+            media="(min-width: 4000px)"
+            srcset="./src/media/contact-photo-2000w.jpg"
+          />
+          <source
+            media="(min-width: 2000px)"
+            srcset="./src/media/contact-photo-1000w.jpg"
+          />
+          <source
+            media="(min-width: 1600px)"
+            srcset="./src/media/contact-photo-800w.jpg"
+          />
+          <source
+            media="(min-width: 1000px)"
+            srcset="./src/media/contact-photo-600w.jpg"
+          />
+          <source
+            media="(min-width: 500px)"
+            srcset="./src/media/contact-photo-400w.jpg"
+          />
+          <img
+            src="./src/media/contact-photo-300w.jpg"
+            alt="Andy with his computer"
+          />
+        </picture>
+      </div>
+    </footer>
+  </body>
+</html>
