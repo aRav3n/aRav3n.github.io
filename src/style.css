@@ -86,8 +86,9 @@ h3 {
 }
 
 header {
+  align-items: center;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: 1fr 1fr;
   height: fit-content;
   justify-content: center;
   overflow: hidden;
@@ -95,12 +96,14 @@ header {
 }
 
 header > div:first-child {
+  border: 1px solid black;
   display: inline-flex;
   flex: 2 0 300px;
   position: relative;
 }
 
 header > div:last-child {
+  border: 1px solid black;
   background-color: white;
   display: flex;
   flex: 1 0 30vw;
@@ -213,6 +216,10 @@ p {
 
 .project > div:last-child {
 
+}
+
+header {
+  grid-template-rows: 2fr 1fr;
 }
 
 header > div:last-child {
