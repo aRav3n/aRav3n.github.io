@@ -7,16 +7,9 @@ module.exports = {
   output: {
     filename: "main.js",
     path: path.resolve(__dirname, "dist"),
-    clean: true,
   },
   devtool: "inline-source-map",
-  plugins: [
-    new HtmlWebpackPlugin({
-      title: "Andy Ryan",
-      // source: https://ionic.io/ionicons
-      favicon: "./src/media/laptop-outline.svg",
-    }),
-  ],
+  plugins: [],
   module: {
     rules: [
       {

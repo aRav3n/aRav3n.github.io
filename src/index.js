@@ -1,24 +1,49 @@
 import "./style.css";
+import GithubIcon from "../src/media/icons8-github.svg";
+import OpenLinkIcon from "../src/media/icons8-open.svg";
 
-const buildMainHtml = () => {
-  /*
-    <header>
-      <div id="headerPhoto">
-        <img
-          src="../src/media/main-photo-300w.jpg"
-          alt="Andy in a tropical setting"
-          srcset="
-            ../src/media/main-photo-300w.jpg   300w,
-            ../src/media/main-photo-300w.jpg   400w,
-            ../src/media/main-photo-600w.jpg   600w,
-            ../src/media/main-photo-800w.jpg   800w,
-            ../src/media/main-photo-1000w.jpg 1000w,
-            ../src/media/main-photo-2000w.jpg 2000w
-          "
-          sizes="(max-width: 350px)"
-        />
-        <h1></h1>
-      </div>
-    </header>
-  */
-}
+const projectList = [];
+
+const addProject = (
+  screenshotSrc,
+  imageAltText,
+  projectName,
+  projectDescription
+) => {
+  const projectObject = {};
+  projectObject.screenshot = screenshotSrc;
+  projectObject.name = projectName;
+  projectObject.description = projectDescription;
+  projectObject.alt = imageAltText;
+  projectList.push(projectObject);
+};
+
+const buildProjectDOM = () => {
+  const mainDomElement = document.querySelector("main");
+
+  const heading = document.createElement("h2");
+  heading.innerHTML = "My Work";
+
+  const projectGrid = document.createElement("div");
+  projectGrid.classList.add("projectGrid");
+
+  for (let i = 0; i < projectList.length; i++) {
+    const projectObject = projectList[i];
+    const projectDiv = document.createElement("div");
+    projectDiv.classList.add("project");
+
+    const screenshot = document.createElement("img");
+    screenshot.setAttribute("alt", projectObject.alt);
+    screenshot.setAttribute("src", projectObject.screenshot);
+    const screenshotDiv = document.createElement("div");
+    screenshotDiv.appendChild(screenshot);
+    projectDiv.appendChild(screenshotDiv);
+
+    const linkDiv = document.createElement
+
+  }
+
+  mainDomElement.innerHTML = "";
+  mainDomElement.appendChild(heading);
+  mainDomElement.appendChild(projectGrid);
+};
