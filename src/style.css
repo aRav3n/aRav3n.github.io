@@ -1,3 +1,8 @@
+:root {
+  --sidebar-color: #b3cfc2;
+  --bg-color: #5ac18f;
+}
+
 * {
   color: inherit;
   margin: 0;
@@ -16,7 +21,7 @@ body > div {
 }
 
 body > div > div {
-  background-color: #5ba5b8;
+  background-color: var(--sidebar-color);
   display: none;
   position: relative;
   z-index: 1;
@@ -35,6 +40,7 @@ body > div > div {
 
 .contact a img {
   filter: invert(100%);
+  width: 24px;
 }
 
 div {
@@ -49,12 +55,20 @@ main {
 }
 
 footer {
-  background-color: #0891b2;
+  background-color: var(--bg-color);
   color: white;
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  justify-content: space-between;
+  justify-content: start;
+}
+
+footer a {
+  align-items: center;
+  display: flex;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  justify-self: start;
+  text-decoration: none;
 }
 
 footer button {
@@ -198,7 +212,7 @@ p {
   display: grid;
   gap: 0.75rem;
   grid-auto-rows: max-content;
-  height: 180px;
+  min-height: 150px;
   padding: 0.5rem 1rem;
 }
 
@@ -208,7 +222,7 @@ p {
 }
 
 .slantedBackground {
-  background-color: #0891b2;
+  background-color: var(--bg-color);
   bottom: 4vh;
   height: 100vh;
   left: 0;
@@ -246,7 +260,7 @@ p {
   }
 
   .project > div:last-child {
-    height: 200px;
+    min-height: 200px;
   }
 
   .slantedBackground {
@@ -292,9 +306,6 @@ p {
       min-width: 600px;
     }
 
-    header > div:last-child {
-    }
-
     main {
       grid-column: 2 / -2;
       grid-row: 2 / -2;
@@ -306,7 +317,7 @@ p {
   }
 }
 
-@media (1000px > width >= 500px) {
+@media (1000px > width >= 650px) {
   body {
     gap: 0;
   }
@@ -337,7 +348,7 @@ p {
   }
 
   .project > div:last-child {
-    height: 190px;
+    min-height: 190px;
   }
 
   .slantedBackground {
