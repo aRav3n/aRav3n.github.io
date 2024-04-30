@@ -94,4 +94,3 @@ const buildProjectDOM = () => {
   mainDomElement.appendChild(projectGrid);
 };
 
-buildProjectDOM();

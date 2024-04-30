@@ -6,9 +6,20 @@
   padding: 0;
 }
 
-body {
+body > div {
+  align-content: space-between;
   display: grid;
-  gap: 3rem;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+  row-gap: 3rem;
+}
+
+body > div > div {
+  background-color: #5ba5b8;
+  display: none;
+  position: relative;
+  z-index: 1;
 }
 
 .contact {
@@ -90,7 +101,6 @@ header {
   display: grid;
   height: fit-content;
   justify-content: stretch;
-  overflow: hidden;
   position: relative;
 }
 
@@ -109,8 +119,8 @@ header > div:last-child {
   height: fit-content;
   justify-content: center;
   margin: 3rem 0;
-  min-width: 30vw;
-  overflow: hidden;
+  max-width: 1260px;
+  min-width: 300px;
   padding: 3rem 1rem;
   position: relative;
   z-index: -1;
@@ -136,10 +146,11 @@ header h1 {
   text-align: end;
   text-shadow: 2px 0px 2px rgba(0, 0, 0, 0.6);
   text-wrap: pretty;
-  transform: translatex(1rem);
+  transform: translateX(1rem);
 }
 
 main {
+  background-color: #ffffff;
   display: grid;
   gap: 0.5rem;
 }
@@ -200,12 +211,12 @@ p {
 .slantedBackground {
   background-color: #0891b2;
   bottom: 4vh;
-  height: 100%;
+  height: 100vh;
   left: 0;
   transform-origin: bottom left;
   transform: translateX(-7vw) scale(10) rotate(-15deg);
   position: absolute;
-  width: 100%;
+  width: 100vw;
   z-index: -2;
 }
 
@@ -226,6 +237,58 @@ p {
 
   .slantedBackground {
     bottom: -5vh;
+  }
+
+  @media (width >= 2000px) {
+    body > div {
+      grid-template-columns: 1fr 2000px 1fr;
+      grid-template-rows: max-content max-content max-content;
+    }
+
+    body > div > div {
+      display: block;
+      grid-row: 1 / -1;
+    }
+
+    body > div > div:first-child {
+      grid-column: 1 / 2;
+    }
+
+    body > div > div:last-child {
+      grid-column: -2 / -1;
+    }
+
+    footer {
+      grid-column: 2 / -2;
+      grid-row: -2 / -1;
+    }
+
+    footer,
+    header,
+    main {
+      padding: 5vh 140px;
+    }
+
+    header {
+      grid-column: 2 / -2;
+      grid-row: 1 / 2;
+    }
+
+    header > div > img {
+      min-width: 600px;
+    }
+
+    header > div:last-child {
+    }
+
+    main {
+      grid-column: 2 / -2;
+      grid-row: 2 / -2;
+    }
+
+    .slantedBackground {
+      transform: translateX(calc((2000px-100vw) / 2));
+    }
   }
 }
 
@@ -258,8 +321,6 @@ p {
     right: -100%;
     transform: translateX(-1rem);
   }
-
-  
 
   .project > div:last-child {
     height: 190px;
