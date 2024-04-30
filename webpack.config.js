@@ -2,22 +2,14 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  // mode: "production",
-  mode: "development",
-  devtool: "inline-source-map",
+  mode: "production",
+  // mode: "development",
+  // devtool: "inline-source-map",
   entry: "./src/index.js",
   output: {
     filename: "main.js",
     path: path.resolve(__dirname, "dist"),
   },
-  /*
-  plugins: [
-    new HtmlWebpackPlugin({
-      title: "GroundedWanderer Dev",
-      favicon: "./src/media/laptop-outline.svg"
-    }),
-  ],
-  */
   module: {
     rules: [
       {

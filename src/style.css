@@ -125,6 +125,18 @@ header > div:first-child {
   position: relative;
 }
 
+header > div:first-child > h2 {
+  bottom: 1rem;
+  color: white;
+  font-size: 4rem;
+  max-width: 50vw;
+  position: absolute;
+  text-align: end;
+  text-shadow: 2px 0px 2px rgba(0, 0, 0, 0.6);
+  text-wrap: pretty;
+  transform: translateX(1rem);
+}
+
 header > div:last-child {
   background-color: white;
   display: flex;
@@ -148,18 +160,6 @@ header > div > img {
   height: auto;
   object-fit: cover;
   width: auto;
-}
-
-header .slantedBackground + h2 {
-  bottom: 1rem;
-  color: white;
-  font-size: 4rem;
-  max-width: 50vw;
-  position: absolute;
-  text-align: end;
-  text-shadow: 2px 0px 2px rgba(0, 0, 0, 0.6);
-  text-wrap: pretty;
-  transform: translateX(1rem);
 }
 
 main {
@@ -341,7 +341,7 @@ p {
     margin-bottom: 0px;
   }
 
-  header .slantedBackground + h2 {
+  header > div:first-child > h2 {
     top: 0%;
     right: -100%;
     transform: translateX(-1rem);
