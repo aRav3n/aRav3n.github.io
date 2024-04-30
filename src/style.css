@@ -150,7 +150,7 @@ header > div > img {
   width: auto;
 }
 
-header h1 {
+header .slantedBackground + h2 {
   bottom: 1rem;
   color: white;
   font-size: 4rem;
@@ -341,7 +341,7 @@ p {
     margin-bottom: 0px;
   }
 
-  header h1 {
+  header .slantedBackground + h2 {
     top: 0%;
     right: -100%;
     transform: translateX(-1rem);

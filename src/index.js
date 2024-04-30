@@ -1,5 +1,6 @@
 import "./style.css";
 import GithubIcon from "../src/media/icons8-github.svg";
+import EmailIcon from "../src/media/mail_FILL0_wght400_GRAD0_opsz24.svg";
 import OpenLinkIcon from "../src/media/icons8-open.svg";
 import battleshipImg from "../src/media/Screenshots/battleship.jpeg";
 import businessPageImg from "../src/media/Screenshots/business_page.jpeg";
@@ -126,7 +127,7 @@ const buildProjectList = () => {
   return projectList;
 };
 
-const buildProjectDOM = () => {
+const buildMain = () => {
   buildProjectList();
   const projectList = buildProjectList();
   const mainDomElement = document.querySelector("main");
@@ -189,4 +190,4 @@ const buildProjectDOM = () => {
   mainDomElement.appendChild(projectGrid);
 };
 
-buildProjectDOM();
+buildMain();
