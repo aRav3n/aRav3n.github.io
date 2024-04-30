@@ -123,8 +123,6 @@ header > div:last-child {
   max-width: 1260px;
   min-width: 300px;
   padding: 3rem 1rem;
-  position: relative;
-  z-index: -1;
 }
 
 header > div > div {
@@ -221,6 +219,21 @@ p {
   z-index: -2;
 }
 
+@media (hover: hover) {
+  .project {
+    opacity: 70%;
+    -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.75);
+  }
+
+  .project:hover {
+    opacity: 100%;
+    -webkit-box-shadow: 2px 2px 8px 0px #b5b818;
+    -moz-box-shadow: 2px 2px 8px 0px #b5b818;
+    box-shadow: 2px 2px 8px 0px #b5b818;
+  }
+}
 @media (width >= 1000px) {
   header {
     grid-template-columns: 1fr 1fr;
