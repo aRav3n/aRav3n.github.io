@@ -35,6 +35,15 @@ const buildProjectList = () => {
   };
 
   addProject(
+    businessPageImg,
+    "homepage for a massage business in Mexico City",
+    "Business Homepage",
+    "https://github.com/aRav3n/punto-de-calma-homepage",
+    "https://arav3n.github.io/punto-de-calma-homepage/",
+    "This was my first in depth project utilizing webpack. It was a lot of fun to work on, so much so that I had to be reminded to take breaks to eat!"
+  );
+
+  addProject(
     battleshipImg,
     "battleship game part way through",
     "Battleship Game",
@@ -50,15 +59,6 @@ const buildProjectList = () => {
     "https://github.com/aRav3n/todo-list",
     "https://arav3n.github.io/todo-list/",
     "This project is my take on a simple to-do list. In doing this project I got some hands-on learning for long-term browser storage as well as storing values to, and retrieving them from, JSON."
-  );
-
-  addProject(
-    businessPageImg,
-    "homepage for a massage business in Mexico City",
-    "Business Homepage",
-    "https://github.com/aRav3n/punto-de-calma-homepage",
-    "https://arav3n.github.io/punto-de-calma-homepage/",
-    "This was my first in depth project utilizing webpack. It was a lot of fun to work on, so much so that I had to be reminded to take breaks to eat!"
   );
 
   addProject(
