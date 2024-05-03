@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "gitPublish": "gh-pages -d dist",
+    "gitPublish": "gh-pages -d dist --cname groundedwanderer.dev",
     "watch": "webpack --watch",
     "build": "webpack"
   },
