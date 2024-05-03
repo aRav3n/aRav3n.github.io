@@ -128,14 +128,23 @@ const buildProjectList = () => {
 };
 
 const toggleVisibility = (clickElement, visibilityElement) => {
+  const changeVisibility = (element) => {
+    // credit to Adam Rackis: https://stackoverflow.com/a/8454104/20821536
+    element.style.display = element.style.display === "" ? "none" : "";
+  };
+
   document.addEventListener("DOMContentLoaded", () => {
     visibilityElement.style.display = "none";
   });
 
   clickElement.addEventListener("click", () => {
-    // credit to Adam Rackis: https://stackoverflow.com/a/8454104/20821536
-    visibilityElement.style.display =
-      visibilityElement.style.display === "none" ? "" : "none";
+    changeVisibility(visibilityElement);
+  });
+
+  clickElement.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      changeVisibility(visibilityElement);
+    }
   });
 };
 
@@ -157,6 +166,8 @@ const buildMain = () => {
     const projectObject = projectList[i];
     const projectDiv = document.createElement("div");
     projectDiv.classList.add("project");
+    projectDiv.setAttribute("tabindex", "0");
+    projectDiv.setAttribute("alt", projectObject.name);
 
     const screenshot = new Image();
     screenshot.setAttribute("alt", projectObject.alt);
@@ -175,6 +186,7 @@ const buildMain = () => {
 
     const buttonDiv = document.createElement("div");
     const gitLink = document.createElement("a");
+    gitLink.setAttribute("tabindex", "0");
     gitLink.setAttribute("href", projectObject.git);
     gitLink.setAttribute("target", "_blank");
     gitLink.setAttribute("rel", "noopener noreferrer");
@@ -184,6 +196,7 @@ const buildMain = () => {
     gitLink.appendChild(gitImg);
     gitLink.innerHTML += "View source code on GitHub";
     const previewLink = document.createElement("a");
+    previewLink.setAttribute("tabindex", "0");
     previewLink.setAttribute("href", projectObject.preview);
     previewLink.setAttribute("target", "_blank");
     previewLink.setAttribute("rel", "noopener noreferrer");
@@ -193,8 +206,8 @@ const buildMain = () => {
     previewLink.appendChild(previewImg);
     previewLink.innerHTML += "Check out the project web page";
     buttonDiv.classList.add("popupButtonDiv");
-    buttonDiv.appendChild(gitLink);
     buttonDiv.appendChild(previewLink);
+    buttonDiv.appendChild(gitLink);
 
     projectDiv.appendChild(screenshotDiv);
     projectDiv.appendChild(detailDiv);

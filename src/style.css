@@ -1,6 +1,8 @@
 :root {
   --sidebar-color: #b3cfc2;
-  --bg-color: #5ac18f;
+  --button-bg-color: #55b486;
+  --header-bg-color: #4da57a;
+  --footer-bg-color: #387959;
 }
 
 * {
@@ -55,7 +57,7 @@ main {
 }
 
 footer {
-  background-color: var(--bg-color);
+  background-color: var(--footer-bg-color);
   color: white;
   display: grid;
   gap: 2rem;
@@ -203,7 +205,7 @@ p {
 
 .popupButtonDiv > a {
   align-items: center;
-  background-color: var(--bg-color);
+  background-color: var(--button-bg-color);
   border-radius: 0.5rem;
   display: flex;
   gap: 0.5rem;
@@ -252,7 +254,7 @@ p {
 }
 
 .project p {
-  color: #00000088;
+  color: #000000c7;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -264,7 +266,7 @@ p {
 }
 
 .slantedBackground {
-  background-color: var(--bg-color);
+  background-color: var(--header-bg-color);
   bottom: 4vh;
   height: 100vh;
   left: 0;
@@ -277,14 +279,12 @@ p {
 
 @media (hover: hover) {
   .project {
-    opacity: 70%;
     -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.75);
   }
 
   .project:hover {
-    opacity: 100%;
     -webkit-box-shadow: 2px 2px 8px 0px #b5b818;
     -moz-box-shadow: 2px 2px 8px 0px #b5b818;
     box-shadow: 2px 2px 8px 0px #b5b818;
