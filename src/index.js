@@ -127,6 +127,18 @@ const buildProjectList = () => {
   return projectList;
 };
 
+const toggleVisibility = (clickElement, visibilityElement) => {
+  document.addEventListener("DOMContentLoaded", () => {
+    visibilityElement.style.display = "none";
+  });
+
+  clickElement.addEventListener("click", () => {
+    // credit to Adam Rackis: https://stackoverflow.com/a/8454104/20821536
+    visibilityElement.style.display =
+      visibilityElement.style.display === "none" ? "" : "none";
+  });
+};
+
 const buildMain = () => {
   buildProjectList();
   const projectList = buildProjectList();
@@ -134,6 +146,9 @@ const buildMain = () => {
 
   const heading = document.createElement("h2");
   heading.innerHTML = "Examples of My Work";
+
+  const clickMessage = document.createElement("h3");
+  clickMessage.innerHTML = "Click on a project to learn more!";
 
   const projectGrid = document.createElement("div");
   projectGrid.classList.add("projectGrid");
@@ -149,10 +164,16 @@ const buildMain = () => {
     const screenshotDiv = document.createElement("div");
     screenshotDiv.appendChild(screenshot);
 
-    const titleDiv = document.createElement("div");
     const projectTitle = document.createElement("h3");
     projectTitle.innerHTML = projectObject.name;
-    const linkDiv = document.createElement("div");
+
+    const descriptionP = document.createElement("p");
+    descriptionP.innerHTML = projectObject.description;
+    const detailDiv = document.createElement("div");
+    detailDiv.appendChild(projectTitle);
+    detailDiv.appendChild(descriptionP);
+
+    const buttonDiv = document.createElement("div");
     const gitLink = document.createElement("a");
     gitLink.setAttribute("href", projectObject.git);
     gitLink.setAttribute("target", "_blank");
@@ -161,6 +182,7 @@ const buildMain = () => {
     gitImg.src = GithubIcon;
     gitImg.setAttribute("alt", "project git hub");
     gitLink.appendChild(gitImg);
+    gitLink.innerHTML += "View source code on GitHub";
     const previewLink = document.createElement("a");
     previewLink.setAttribute("href", projectObject.preview);
     previewLink.setAttribute("target", "_blank");
@@ -169,24 +191,22 @@ const buildMain = () => {
     previewImg.src = OpenLinkIcon;
     previewImg.setAttribute("alt", "live preview of the project");
     previewLink.appendChild(previewImg);
-    linkDiv.appendChild(gitLink);
-    linkDiv.appendChild(previewLink);
-    titleDiv.appendChild(projectTitle);
-    titleDiv.appendChild(linkDiv);
-
-    const descriptionP = document.createElement("p");
-    descriptionP.innerHTML = projectObject.description;
-    const detailDiv = document.createElement("div");
-    detailDiv.appendChild(titleDiv);
-    detailDiv.appendChild(descriptionP);
+    previewLink.innerHTML += "Check out the project web page";
+    buttonDiv.classList.add("popupButtonDiv");
+    buttonDiv.appendChild(gitLink);
+    buttonDiv.appendChild(previewLink);
 
     projectDiv.appendChild(screenshotDiv);
     projectDiv.appendChild(detailDiv);
+    projectDiv.appendChild(buttonDiv);
     projectGrid.appendChild(projectDiv);
+
+    toggleVisibility(projectDiv, buttonDiv);
   }
 
   mainDomElement.innerHTML = "";
   mainDomElement.appendChild(heading);
+  mainDomElement.appendChild(clickMessage);
   mainDomElement.appendChild(projectGrid);
 };
 

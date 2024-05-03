@@ -166,23 +166,58 @@ main {
   background-color: #ffffff;
   display: grid;
   gap: 0.5rem;
+  justify-content: center;
+}
+
+main h2,
+main h3 {
+  text-align: center;
+}
+
+main h3 {
+  font-size: 1rem;
+  font-weight: 100;
 }
 
 p {
   max-width: 99%;
 }
 
-.projectGrid {
-  column-gap: 3vw;
+.popupButtonDiv {
+  align-content: space-evenly;
+  background-color: #ffffffdd;
+  border-radius: 1rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  row-gap: 5vh;
-}
-
-.project {
+  height: 60%;
+  justify-content: center;
+  left: 5%;
+  padding: 1rem;
+  position: absolute;
+  top: 20%;
+  width: 90%;
+  z-index: 1;
   -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.75);
+}
+
+.popupButtonDiv > a {
+  align-items: center;
+  background-color: var(--bg-color);
+  border-radius: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  text-decoration: none;
+}
+
+.project {
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.75);
+  overflow: hidden;
+  position: relative;
 }
 
 .project > *:first-child {
@@ -207,7 +242,7 @@ p {
   gap: 1vw;
 }
 
-.project > div:last-child {
+.project > div:nth-child(2) {
   align-items: start;
   display: grid;
   gap: 0.75rem;
@@ -219,6 +254,13 @@ p {
 .project p {
   color: #00000088;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.projectGrid {
+  column-gap: 3vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  row-gap: 5vh;
 }
 
 .slantedBackground {
